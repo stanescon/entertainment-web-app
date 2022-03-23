@@ -1,0 +1,8 @@
+.header{
+  height: 90vh;
+  width: 100px;
+  position: fixed;
+  border-radius: 15px;
+  background: #161d2f;
+  margin: 5vh 40px
+}

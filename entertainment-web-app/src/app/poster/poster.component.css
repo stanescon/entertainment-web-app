@@ -1,0 +1,21 @@
+.poster-content{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-row: 1fr auto auto;
+  padding: 10px;
+  width: 300px;
+}
+.movie-poster {
+  grid-column: span 2;
+  border-radius: 10px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+.type{
+  text-align: end;
+}
+.movie-name{
+  font-size: 18px;
+  font-weight: 500;
+  grid-column: span 2;
+}

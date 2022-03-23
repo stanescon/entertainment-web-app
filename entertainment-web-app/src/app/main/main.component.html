@@ -1,0 +1,6 @@
+<input type="text" class="input-search">
+<h1>Populares</h1>
+<app-poster *ngFor="let movie of movieInformation"
+[movieName]="movie.title" [moviePoster]="movie.backdrop_path" [movieYear]="movie.release_date"
+>
+</app-poster>
