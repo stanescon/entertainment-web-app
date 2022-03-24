@@ -8,7 +8,7 @@
 <h1>Populares</h1>
 <div class="all-movies">
   <app-poster *ngFor="let movie of movieInformation"
-  [movieName]="movie.title" [moviePoster]="movie.backdrop_path" [movieYear]="movie.release_date"
+  [movieName]="movie.title" [moviePoster]="movie.backdrop_path" [movieYear]="movie.release_date" [id]="movie.id"
   >
   </app-poster>
 </div>

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { PosterComponent } from './poster/poster.component';
+import { MovieInfoComponent } from './movie-info/movie-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
-    PosterComponent
+    PosterComponent,
+    MovieInfoComponent
   ],
   imports: [
     BrowserModule,
