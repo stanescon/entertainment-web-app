@@ -1,0 +1,8 @@
+.content{
+  display: flex;
+  gap: 20px;
+  margin-top: 10vh;
+}
+.poster{
+  width: 40vh;
+}

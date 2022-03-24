@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,8 @@ export class PosterComponent implements OnInit {
   @Input() id = ''
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -23,7 +25,9 @@ export class PosterComponent implements OnInit {
 
   movieInfo(){
     this.http.get('https://api.themoviedb.org/3/movie/' + this.id + '?api_key=c486dfa0652725b2074f5636af14ea12&language=pt-BR')
-    .subscribe((response: any) => console.log(response.imdb_id))
+    .subscribe((response: any) => {
+      this.router.navigate(['movie-info', this.id, response.imdb_id])
+    })
   }
 
 }

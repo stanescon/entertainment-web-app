@@ -1,1 +1,12 @@
-<p>movie-info works!</p>
+<div class="content">
+  <img *ngIf="poster" src="https://image.tmdb.org/t/p/original{{ poster }}" class="poster">
+  <div class="information-movie">
+    <h1 class="move-name">{{ name }}</h1>
+    <p class="move-date">{{ date | date: 'dd/MM/yyyy'}}</p>
+    <p class="genres">{{ genre }}</p>
+    <p class="runtime">{{ runtime }}</p>
+    <button class="popular-review">{{ popularReview }}</button>
+    <button class="rotten-tomatoes">{{ rottenTomatoesEvaluation }}</button>
+
+  </div>
+</div>
