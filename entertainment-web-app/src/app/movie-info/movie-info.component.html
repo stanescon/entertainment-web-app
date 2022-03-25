@@ -1,12 +1,18 @@
 <div class="content">
   <img *ngIf="poster" src="https://image.tmdb.org/t/p/original{{ poster }}" class="poster">
   <div class="information-movie">
-    <h1 class="move-name">{{ name }}</h1>
-    <p class="move-date">{{ date | date: 'dd/MM/yyyy'}}</p>
-    <p class="genres">{{ genre }}</p>
-    <p class="runtime">{{ runtime }}</p>
-    <button class="popular-review">{{ popularReview }}</button>
-    <button class="rotten-tomatoes">{{ rottenTomatoesEvaluation }}</button>
+    <h1 class="movie-name">{{ name }} </h1>
+    <div class="first-info">
+      <p class="movie-date">{{ date | date: 'dd/MM/yyyy'}}</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+      <p class="genres">{{ genre }}</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+      <p class="runtime">{{ runtime }}</p>
+    </div>
+    <div class="buttons">
+      <button class="popular-review">{{ popularReview }}</button>
+      <button class="rotten-tomatoes">{{ rottenTomatoesEvaluation }}</button>
+    </div>
 
   </div>
 </div>

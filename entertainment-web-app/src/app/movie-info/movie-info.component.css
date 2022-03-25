@@ -6,3 +6,29 @@
 .poster{
   width: 40vh;
 }
+.information-movie{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.first-info{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.buttons{
+  display: flex;
+  gap: 5px;
+}
+.popular-review, .rotten-tomatoes{
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+.popular-review{
+  background: #081c22;
+  border: 3px solid;
+}
