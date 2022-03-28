@@ -68,4 +68,11 @@ export class MovieInfoComponent implements OnInit {
 
   }
 
+  salvarFavoritos(){
+    console.log('ok')
+  }
+  salvarVer(){
+    console.log('oook')
+  }
+
 }

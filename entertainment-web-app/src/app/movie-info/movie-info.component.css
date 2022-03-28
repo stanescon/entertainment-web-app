@@ -2,6 +2,7 @@
   display: flex;
   gap: 20px;
   margin-top: 10vh;
+  margin-right: 200px;
 }
 .poster{
   width: 40vh;
@@ -9,6 +10,7 @@
 .information-movie{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
 }
 .first-info{
@@ -16,19 +18,56 @@
   gap: 5px;
   align-items: center;
 }
-.buttons{
+.avaliacoes{
   display: flex;
   gap: 5px;
+  position: relative;
 }
 .popular-review, .rotten-tomatoes{
   width: 70px;
   height: 70px;
   border-radius: 70px;
   border: none;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 2px 2px 2px #000000;
 }
 .popular-review{
-  background: #081c22;
-  border: 3px solid;
+  background: #21d07a;
+  color: #081c22;
+}
+.rotten-tomatoes{
+  background: #f76666;
+  color: #7d1717;
+}
+.legend{
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100px;
+}
+.bi-circle{
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+.bi-circle-2{
+  position: absolute;
+  top: 3px;
+  left: 183px;
+}
+.tag-line{
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+.sinopse {
+  margin: 50px 0;
+  font-size: 1.2rem;
+}
+.buttons{
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 25px;
 }
