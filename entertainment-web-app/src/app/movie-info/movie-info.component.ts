@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-info',
@@ -29,7 +29,8 @@ export class MovieInfoComponent implements OnInit {
 
   constructor(
     private router: ActivatedRoute,
-    private http: HttpClient
+    private http: HttpClient,
+    private router2: Router
   ) { }
 
   ngOnInit(): void {
@@ -71,8 +72,13 @@ export class MovieInfoComponent implements OnInit {
   salvarFavoritos(){
     console.log('ok')
   }
+
   salvarVer(){
     console.log('oook')
+  }
+
+  voltar(){
+    this.router2.navigate(['main'])
   }
 
 }
