@@ -12,7 +12,7 @@
   border: none;
   outline: none;
 }
-.all-movies{
+.all-movies, .busca{
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
