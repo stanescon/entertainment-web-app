@@ -23,6 +23,12 @@ export class MovieInfoComponent implements OnInit {
   director = ''
   rottenTomatoesEvaluation = ''
   runtime = ''
+  favoritos = localStorage.getItem('favoritos') ? localStorage.getItem('favoritos') : ''
+  arrFav = this.favoritos ? this.favoritos.split(',') : []
+  ver = localStorage.getItem('ver') ? localStorage.getItem('ver') : ''
+  arrVer = this.ver ? this.ver.split(',') : []
+  verificacaoFav = false
+  verificacaoVer = false
 
 
 
@@ -34,14 +40,11 @@ export class MovieInfoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.router.snapshot.params
-    console.log(this.router.snapshot.params)
     this.id = this.router.snapshot.params['id'];
     this.imdbId = this.router.snapshot.params['imdbId'];
 
     this.http.get('https://api.themoviedb.org/3/movie/' + this.id + '?api_key=c486dfa0652725b2074f5636af14ea12&language=pt-BR')
     .subscribe((response: any) => {
-      console.log(response);
       this.name = response.title;
       this.sinopse = response.overview;
       this.originalName = response.original_title;
@@ -60,21 +63,49 @@ export class MovieInfoComponent implements OnInit {
 
     this.http.get('http://www.omdbapi.com/?i=' + this.imdbId + '&apikey=4ee1af46')
     .subscribe((response : any) => {
-      console.log(response);
       this.actors = response.Actors;
       this.director = response.Director;
       this.rottenTomatoesEvaluation = response?.Ratings[1]?.Value;
       this.runtime = response.Runtime
     })
 
+    console.log(this.arrFav)
+    console.log(this.favoritos)
+
+    if(this.arrFav.includes(this.id)){
+      this.verificacaoFav = true
+    }
+
+
   }
 
   salvarFavoritos(){
-    console.log('ok')
+    this.arrFav?.push(this.id)
+    localStorage.setItem('favoritos', (this.arrFav).toString())
+    this.verificacaoFav = true
+    console.log(this.arrFav)
+  }
+
+  tirarDosFavoritos(){
+    this.arrFav = this.arrFav.filter((id) => id != this.id)
+    localStorage.setItem('favoritos', (this.arrFav).toString())
+    this.verificacaoFav = false
+    console.log(this.arrFav)
+
   }
 
   salvarVer(){
-    console.log('oook')
+    this.arrVer?.push(this.id)
+    localStorage.setItem('ver', (this.arrVer).toString())
+    this.verificacaoVer = true
+    console.log(this.arrVer)
+  }
+
+  tirarVer(){
+    this.arrVer = this.arrVer.filter((id) => id != this.id)
+    localStorage.setItem('ver', (this.arrVer).toString())
+    this.verificacaoVer = false
+    console.log(this.arrVer)
   }
 
   voltar(){
