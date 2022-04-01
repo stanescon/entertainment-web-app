@@ -12,6 +12,7 @@ export class PosterComponent implements OnInit {
 
   @Input() movieName = ''
   @Input() moviePoster = ''
+  @Input() posterSecundario = ''
   @Input() movieYear = ''
   @Input() id = ''
 
@@ -21,6 +22,7 @@ export class PosterComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
   }
 
   movieInfo(){

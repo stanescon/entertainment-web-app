@@ -19,3 +19,11 @@
   font-weight: 500;
   grid-column: span 2;
 }
+.poster-secundario {
+  width: 300px;
+  height: 168.75px;
+  object-fit: cover;
+  grid-column: span 2;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,7 @@
+<h1>Ver Depois</h1>
+<div class="content">
+  <app-poster *ngFor="let movie of arrVer"
+  [movieName]="movie.title" [moviePoster]="movie.backdrop_path" [movieYear]="movie.release_date" [id]="movie.id" [posterSecundario]="movie?.poster_path"
+  ></app-poster>
+</div>
+
